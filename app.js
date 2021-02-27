@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const connectDB = require('./config/db');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
+const methodOverride = require('method-override');
 const path = require('path');
 const passport = require('passport');
 const session = require('express-session');
@@ -23,15 +24,27 @@ const app = express();
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json());
 
+//Method Override
+app.use(methodOverride ((req, res)=>{
+    if(req.body && typeof req.body === 'object' && '_method' in req.body){
+        //look in urlencoded POST bodies and delete it
+        let method = req.body._method;
+        delete req.body._method;
+        return method
+    }
+}))
+
 //Handlebars Helpers
-const { formatDate, stripTags, truncate, editIcon } = require('./helpers/hbs');
+const { formatDate, stripTags, truncate, editIcon, select } = require('./helpers/hbs');
+const { type } = require('os');
 
 //Handlebars
 app.engine('.hbs', exphbs({ helpers: {
     formatDate,
     stripTags,
     truncate,
-    editIcon
+    editIcon,
+    select
 } , defaultLayout: 'main', extname: '.hbs' }));
 app.set('view engine', '.hbs');
 
