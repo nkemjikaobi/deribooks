@@ -123,7 +123,7 @@ router.delete('/:id', ensureAuth, async (req, res) => {
     }
 })
 
-// @desc User stories
+// @desc User Stories
 // @route GET /stories/user/:userId
 router.get('/user/:userId', ensureAuth, async (req, res) => {
     try {
