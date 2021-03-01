@@ -9,7 +9,7 @@ module.exports = function(passport){
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         callbackURL: '/auth/google/callback'
     },
-    async (accessToken, refreshToken, profile, done) => {
+    async ( profile, done) => {
         //console.log(profile)
         const newUser = {
             googleId: profile.id,

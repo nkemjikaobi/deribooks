@@ -36,7 +36,7 @@ app.use(methodOverride ((req, res)=>{
 
 //Handlebars Helpers
 const { formatDate, stripTags, truncate, editIcon, select } = require('./helpers/hbs');
-const { type } = require('os');
+//const { type } = require('os');
 
 //Handlebars
 app.engine('.hbs', exphbs({ helpers: {
