@@ -35,5 +35,5 @@ Install dependencies with <code><pre>npm install</pre></code>
 * Check all dependencies and devdependecies used in **package.json**
 
 <h1>Next steps</h1>
-Visit http://localhost:3000
+Visit http://localhost:7002
 <p>Sign in and start creating stories</p>
