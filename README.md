@@ -1,4 +1,4 @@
-LIVE URL:  coming soon...
+LIVE URL:  http://deribooks.herokuapp.com
 
 <h1>Deribooks</h1>
 <p>This is a project for users to create public and private stories</p>
