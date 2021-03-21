@@ -7,7 +7,7 @@ LIVE URL:  http://deribooks.herokuapp.com
 <p>Stories can be made public or private</p>
 <p>Only public stories would be made available for reading</p>
 
-A Contact Keeper built with NODEJS, EXPRESS, and MONGODB
+
 <p>PASSPORT-GOOGLE-OAUTH20 and PASSPORT is used for authentication and authorization</p>
 <p>HANDLEBARS is the templating engine used</p>
 <p>MOMENT is used to format time</p>
